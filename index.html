@@ -12,45 +12,248 @@
             font-family: 'Inter', system-ui, sans-serif; 
             background-color: #0f172a;
             color: #e2e8f0;
+            overflow-x: hidden;
         }
-        .dark-gradient { 
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%); 
+        
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #1e293b 75%, #0f172a 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
         }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Tech Circuit Pattern */
         .tech-circuit { 
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.1'%3E%3Cpath d='M20 20h10v10h-10z'/%3E%3Cpath d='M70 20h10v10h-10z'/%3E%3Cpath d='M20 70h10v10h-10z'/%3E%3Cpath d='M70 70h10v10h-10z'/%3E%3Cpath d='M45 45h10v10h-10z'/%3E%3Cline x1='30' y1='25' x2='70' y2='25' stroke='%23334155' stroke-opacity='0.2' stroke-width='1'/%3E%3Cline x1='30' y1='75' x2='70' y2='75' stroke='%23334155' stroke-opacity='0.2' stroke-width='1'/%3E%3Cline x1='25' y1='30' x2='25' y2='70' stroke='%23334155' stroke-opacity='0.2' stroke-width='1'/%3E%3Cline x1='75' y1='30' x2='75' y2='70' stroke='%23334155' stroke-opacity='0.2' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: circuitMove 20s linear infinite;
         }
+        
+        @keyframes circuitMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+        
+        /* Floating Tech Elements */
+        .floating-tech {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .tech-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: floatTech 15s infinite linear;
+        }
+        
+        .tech-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .tech-element:nth-child(2) { top: 20%; right: 15%; animation-delay: 3s; }
+        .tech-element:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 6s; }
+        .tech-element:nth-child(4) { bottom: 20%; right: 25%; animation-delay: 9s; }
+        .tech-element:nth-child(5) { top: 50%; left: 5%; animation-delay: 12s; }
+        
+        @keyframes floatTech {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+            25% { transform: translateY(-20px) rotate(90deg); opacity: 0.3; }
+            50% { transform: translateY(-40px) rotate(180deg); opacity: 0.1; }
+            75% { transform: translateY(-20px) rotate(270deg); opacity: 0.3; }
+        }
+        
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0f172a;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(59, 130, 246, 0.3);
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            margin-top: 20px;
+            color: #3b82f6;
+            font-size: 18px;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Glass Effect */
         .glass-effect {
             background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(148, 163, 184, 0.1);
         }
+        
+        /* Hover Effects */
         .hover-glow:hover {
             box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
             transform: translateY(-2px);
+            transition: all 0.3s ease;
         }
+        
+        /* Text Gradient */
         .text-gradient {
             background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        
+        /* Pulse Animation */
         .pulse-animation {
             animation: pulse 2s infinite;
         }
+        
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
         }
+        
+        /* Floating Elements */
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
+        
         @keyframes floating {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
+        
+        /* Tech Icons Animation */
+        .tech-icon {
+            animation: techPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes techPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        
+        /* Matrix-style Code Rain */
+        .code-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.05;
+        }
+        
+        .code-column {
+            position: absolute;
+            top: -100%;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            animation: codeFall 10s linear infinite;
+        }
+        
+        @keyframes codeFall {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+        
+        /* Glitch Effect */
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-200">
+    <!-- Loading Screen -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="text-center">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">VPS Synergy</div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <div class="tech-circuit"></div>
+    
+    <!-- Floating Tech Elements -->
+    <div class="floating-tech">
+        <div class="tech-element">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+        </div>
+        <div class="tech-element">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+            </svg>
+        </div>
+        <div class="tech-element">
+            <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+        </div>
+        <div class="tech-element">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+        </div>
+        <div class="tech-element">
+            <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1">
+                <path d="M9 12l2 2 4-4"/>
+                <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
+                <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Matrix Code Rain Effect -->
+    <div class="code-rain" id="code-rain"></div>
+
     <!-- Header -->
     <header class="glass-effect sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,8 +377,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center text-white">
                 <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                    <span class="text-white">Advanced Technology</span><br>
-                    <span class="gradient-text">Solutions & Consulting</span>
+                    <span class="text-white glitch">Advanced Technology</span><br>
+                    <span class="text-gradient pulse-animation">Solutions & Consulting</span>
                 </h1>
                 <p class="text-xl text-slate-300 mb-8 max-w-3xl">
                     Empower your business with state-of-the-art technology solutions and professional IT expertise. 
@@ -739,6 +942,42 @@
     </footer>
 
     <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Matrix Code Rain Effect
+        function createCodeRain() {
+            const codeRain = document.getElementById('code-rain');
+            const characters = '01ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            
+            for (let i = 0; i < 50; i++) {
+                const column = document.createElement('div');
+                column.className = 'code-column';
+                column.style.left = Math.random() * 100 + '%';
+                column.style.animationDelay = Math.random() * 10 + 's';
+                column.style.animationDuration = (Math.random() * 10 + 5) + 's';
+                
+                let text = '';
+                for (let j = 0; j < 20; j++) {
+                    text += characters.charAt(Math.floor(Math.random() * characters.length)) + '<br>';
+                }
+                column.innerHTML = text;
+                
+                codeRain.appendChild(column);
+            }
+        }
+
+        // Initialize code rain
+        createCodeRain();
+
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
