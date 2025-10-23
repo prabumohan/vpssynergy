@@ -1,0 +1,130 @@
+---
+// Footer component
+---
+
+<footer class="bg-slate-950 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="col-span-1 md:col-span-2">
+        <a href="#" class="text-2xl font-bold text-gradient mb-4 block flex items-center space-x-3">
+          <div class="relative">
+            <!-- Custom Tech Logo -->
+            <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Background Circle -->
+              <circle cx="20" cy="20" r="18" fill="url(#footerLogoGradient)" stroke="url(#footerLogoBorder)" stroke-width="2"/>
+              
+              <!-- Tech Circuit Pattern -->
+              <g stroke="white" stroke-width="1.5" fill="none" opacity="0.8">
+                <!-- Central Hub -->
+                <circle cx="20" cy="20" r="3" fill="white"/>
+                
+                <!-- Circuit Lines -->
+                <line x1="20" y1="8" x2="20" y2="17"/>
+                <line x1="20" y1="23" x2="20" y2="32"/>
+                <line x1="8" y1="20" x2="17" y2="20"/>
+                <line x1="23" y1="20" x2="32" y2="20"/>
+                
+                <!-- Diagonal Connections -->
+                <line x1="12" y1="12" x2="17" y2="17"/>
+                <line x1="28" y1="12" x2="23" y2="17"/>
+                <line x1="12" y1="28" x2="17" y2="23"/>
+                <line x1="28" y1="28" x2="23" y2="23"/>
+                
+                <!-- Connection Nodes -->
+                <circle cx="20" cy="8" r="1.5" fill="white"/>
+                <circle cx="20" cy="32" r="1.5" fill="white"/>
+                <circle cx="8" cy="20" r="1.5" fill="white"/>
+                <circle cx="32" cy="20" r="1.5" fill="white"/>
+                <circle cx="12" cy="12" r="1" fill="white"/>
+                <circle cx="28" cy="12" r="1" fill="white"/>
+                <circle cx="12" cy="28" r="1" fill="white"/>
+                <circle cx="28" cy="28" r="1" fill="white"/>
+              </g>
+              
+              <!-- Data Flow Animation -->
+              <circle cx="20" cy="8" r="0.5" fill="#00ff88">
+                <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="20" cy="32" r="0.5" fill="#00ff88">
+                <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="8" cy="20" r="0.5" fill="#00ff88">
+                <animate attributeName="opacity" values="0;1;0" dur="2s" begin="1s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="32" cy="20" r="0.5" fill="#00ff88">
+                <animate attributeName="opacity" values="0;1;0" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+              </circle>
+              
+              <!-- Gradients -->
+              <defs>
+                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                  <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="footerLogoBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            
+            <!-- Status Indicator -->
+            <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full pulse-animation"></div>
+          </div>
+          
+          <!-- Company Name -->
+          <div class="flex flex-col">
+            <span class="text-lg font-medium leading-none">VPS</span> 
+            <span class="text-3xl font-bold leading-none">Synergy</span>
+          </div>
+        </a>
+        <p class="text-slate-400 mb-6 max-w-md">
+          Premium IT solutions with enterprise-grade technology, 
+          innovative digital transformation, and 24/7 expert support.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-slate-400 hover:text-blue-400 transition-colors">Home</a></li>
+          <li><a href="#services" class="text-slate-400 hover:text-blue-400 transition-colors">Services</a></li>
+          <li><a href="#technologies" class="text-slate-400 hover:text-blue-400 transition-colors">Technologies</a></li>
+          <li><a href="#about" class="text-slate-400 hover:text-blue-400 transition-colors">About</a></li>
+          <li><a href="#contact" class="text-slate-400 hover:text-blue-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-white">Support</h3>
+        <ul class="space-y-2">
+          <li><a href="#help" class="text-slate-400 hover:text-blue-400 transition-colors">Help Center</a></li>
+          <li><a href="#docs" class="text-slate-400 hover:text-blue-400 transition-colors">Documentation</a></li>
+          <li><a href="#status" class="text-slate-400 hover:text-blue-400 transition-colors">Status Page</a></li>
+          <li><a href="#ticket" class="text-slate-400 hover:text-blue-400 transition-colors">Submit Ticket</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 mt-12 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+        <div class="text-center md:text-left">
+          <p class="text-slate-400 text-sm mb-2">
+            © 2024 VPS Synergy Limited. All rights reserved.
+          </p>
+          <p class="text-slate-500 text-xs">
+            Registered in England & Wales | Company No. 12345678 | VAT No. GB123456789
+          </p>
+        </div>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#privacy" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Privacy Policy</a>
+          <a href="#terms" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Terms of Service</a>
+          <a href="#cookies" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="text-center">
+        <p class="text-slate-500 text-xs">
+          VPS Synergy™ is a registered trademark. All product names, logos, and brands are property of their respective owners.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
