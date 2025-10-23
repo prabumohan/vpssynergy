@@ -58,7 +58,7 @@
             position: absolute;
             opacity: 0.3;
             animation: floatTech 15s infinite linear;
-            filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.5));
+            filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.5));
         }
         
         .tech-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
@@ -113,8 +113,8 @@
             width: 80px;
             height: 80px;
             border: 3px solid transparent;
-            border-top: 3px solid #00ff88;
-            border-right: 3px solid #00ff88;
+            border-top: 3px solid #60a5fa;
+            border-right: 3px solid #60a5fa;
             animation: techSpin 1s linear infinite;
         }
         
@@ -136,7 +136,7 @@
             transform: translate(-50%, -50%);
             width: 20px;
             height: 20px;
-            background: linear-gradient(45deg, #00ff88, #3b82f6);
+            background: linear-gradient(45deg, #60a5fa, #3b82f6);
             border-radius: 50%;
             animation: techGlow 1s ease-in-out infinite alternate;
         }
@@ -152,18 +152,18 @@
         }
         
         @keyframes techGlow {
-            0% { box-shadow: 0 0 10px #00ff88, 0 0 20px #3b82f6; }
-            100% { box-shadow: 0 0 20px #00ff88, 0 0 40px #3b82f6; }
+            0% { box-shadow: 0 0 10px #60a5fa, 0 0 20px #3b82f6; }
+            100% { box-shadow: 0 0 20px #60a5fa, 0 0 40px #3b82f6; }
         }
         
         .loading-text {
-            color: #00ff88;
+            color: #60a5fa;
             font-size: 24px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3px;
             animation: techTextGlow 2s ease-in-out infinite;
-            text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+            text-shadow: 0 0 10px #60a5fa, 0 0 20px #60a5fa;
         }
         
         .loading-subtitle {
@@ -175,8 +175,8 @@
         }
         
         @keyframes techTextGlow {
-            0%, 100% { text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88; }
-            50% { text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 60px #00ff88; }
+            0%, 100% { text-shadow: 0 0 10px #60a5fa, 0 0 20px #60a5fa; }
+            50% { text-shadow: 0 0 20px #60a5fa, 0 0 40px #60a5fa, 0 0 60px #60a5fa; }
         }
         
         @keyframes techFade {
@@ -196,7 +196,7 @@
         
         .loading-progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #00ff88, #3b82f6, #8b5cf6);
+            background: linear-gradient(90deg, #60a5fa, #3b82f6, #1d4ed8);
             border-radius: 2px;
             animation: techProgress 2s ease-in-out infinite;
         }
@@ -273,11 +273,11 @@
         .code-column {
             position: absolute;
             top: -100%;
-            color: #00ff88;
+            color: #60a5fa;
             font-family: 'Courier New', monospace;
             font-size: 14px;
             animation: codeFall 10s linear infinite;
-            text-shadow: 0 0 5px #00ff88;
+            text-shadow: 0 0 5px #60a5fa;
         }
         
         @keyframes codeFall {
@@ -322,7 +322,7 @@
     <!-- Floating Tech Elements -->
     <div class="floating-tech">
         <div class="tech-element">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
                 <line x1="8" y1="21" x2="16" y2="21"/>
                 <line x1="12" y1="17" x2="12" y2="21"/>
@@ -335,7 +335,7 @@
             </svg>
         </div>
         <div class="tech-element">
-            <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2">
+            <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
             </svg>
         </div>
