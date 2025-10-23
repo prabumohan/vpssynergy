@@ -56,25 +56,80 @@
         
         .tech-element {
             position: absolute;
-            opacity: 0.4;
-            animation: floatTech 15s infinite linear;
-            filter: drop-shadow(0 0 15px rgba(66, 133, 244, 0.6));
+            opacity: 0.7;
+            animation: floatTech 20s infinite linear;
+            filter: drop-shadow(0 0 20px rgba(66, 133, 244, 0.8));
+            transition: all 0.3s ease;
         }
         
-        .tech-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
-        .tech-element:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
-        .tech-element:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 4s; }
-        .tech-element:nth-child(4) { bottom: 20%; right: 25%; animation-delay: 6s; }
-        .tech-element:nth-child(5) { top: 50%; left: 5%; animation-delay: 8s; }
-        .tech-element:nth-child(6) { top: 15%; right: 5%; animation-delay: 10s; }
-        .tech-element:nth-child(7) { bottom: 40%; left: 5%; animation-delay: 12s; }
-        .tech-element:nth-child(8) { top: 60%; right: 10%; animation-delay: 14s; }
+        .tech-element:hover {
+            opacity: 1;
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 30px rgba(66, 133, 244, 1));
+        }
+        
+        .tech-element:nth-child(1) { 
+            top: 10%; left: 10%; 
+            animation: floatTech 18s infinite linear;
+            animation-delay: 0s; 
+        }
+        .tech-element:nth-child(2) { 
+            top: 20%; right: 15%; 
+            animation: floatTech 22s infinite linear;
+            animation-delay: 2s; 
+        }
+        .tech-element:nth-child(3) { 
+            bottom: 30%; left: 20%; 
+            animation: floatTech 16s infinite linear;
+            animation-delay: 4s; 
+        }
+        .tech-element:nth-child(4) { 
+            bottom: 20%; right: 25%; 
+            animation: floatTech 24s infinite linear;
+            animation-delay: 6s; 
+        }
+        .tech-element:nth-child(5) { 
+            top: 50%; left: 5%; 
+            animation: floatTech 20s infinite linear;
+            animation-delay: 8s; 
+        }
+        .tech-element:nth-child(6) { 
+            top: 15%; right: 5%; 
+            animation: floatTech 19s infinite linear;
+            animation-delay: 10s; 
+        }
+        .tech-element:nth-child(7) { 
+            bottom: 40%; left: 5%; 
+            animation: floatTech 21s infinite linear;
+            animation-delay: 12s; 
+        }
+        .tech-element:nth-child(8) { 
+            top: 60%; right: 10%; 
+            animation: floatTech 17s infinite linear;
+            animation-delay: 14s; 
+        }
         
         @keyframes floatTech {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
-            25% { transform: translateY(-20px) rotate(90deg); opacity: 0.3; }
-            50% { transform: translateY(-40px) rotate(180deg); opacity: 0.1; }
-            75% { transform: translateY(-20px) rotate(270deg); opacity: 0.3; }
+            0% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
+                opacity: 0.7; 
+            }
+            25% { 
+                transform: translateY(-30px) translateX(15px) rotate(90deg) scale(1.1); 
+                opacity: 0.9; 
+            }
+            50% { 
+                transform: translateY(-60px) translateX(-10px) rotate(180deg) scale(0.9); 
+                opacity: 0.6; 
+            }
+            75% { 
+                transform: translateY(-30px) translateX(-20px) rotate(270deg) scale(1.05); 
+                opacity: 0.8; 
+            }
+            100% { 
+                transform: translateY(0px) translateX(0px) rotate(360deg) scale(1); 
+                opacity: 0.7; 
+            }
         }
         
         /* Enhanced Loading Animation */
