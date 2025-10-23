@@ -426,69 +426,46 @@
                 <div class="flex items-center">
                     <a href="#" class="text-2xl font-bold text-gradient flex items-center space-x-3">
                         <div class="relative">
-                            <!-- VPS Synergy Logo - Option 1: Circuit Board Style -->
-                            <!-- Alternative Option 2: Hexagonal Tech Logo (commented out)
-                            <svg class="w-12 h-12" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <polygon points="25,5 40,15 40,35 25,45 10,35 10,15" fill="url(#hexGradient)" stroke="url(#hexBorder)" stroke-width="2"/>
-                                <circle cx="25" cy="25" r="8" fill="#ffffff" opacity="0.9"/>
-                                <path d="M20 20 L25 15 L30 20 L30 30 L25 35 L20 30 Z" fill="#1e293b"/>
-                                <circle cx="25" cy="25" r="2" fill="#60a5fa">
-                                    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
-                                </circle>
-                                <defs>
-                                    <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
-                                    </linearGradient>
-                                    <linearGradient id="hexBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            -->
+                            <!-- VPS Synergy Logo - Option 4: Minimalist Tech -->
                             <svg class="w-12 h-12" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Background -->
-                                <rect x="2" y="2" width="46" height="46" rx="8" fill="url(#circuitGradient)" stroke="url(#circuitBorder)" stroke-width="2"/>
+                                <rect x="5" y="5" width="40" height="40" rx="12" fill="url(#minimalGradient)" stroke="url(#minimalBorder)" stroke-width="1.5"/>
                                 
-                                <!-- Circuit Board Pattern -->
-                                <g stroke="#ffffff" stroke-width="1" fill="none" opacity="0.9">
-                                    <!-- Main Circuit Lines -->
-                                    <line x1="10" y1="15" x2="40" y2="15"/>
-                                    <line x1="10" y1="25" x2="40" y2="25"/>
-                                    <line x1="10" y1="35" x2="40" y2="35"/>
-                                    <line x1="15" y1="10" x2="15" y2="40"/>
-                                    <line x1="25" y1="10" x2="25" y2="40"/>
-                                    <line x1="35" y1="10" x2="35" y2="40"/>
-                                    
-                                    <!-- Circuit Nodes -->
-                                    <circle cx="15" cy="15" r="2" fill="#60a5fa"/>
-                                    <circle cx="25" cy="15" r="2" fill="#34a853"/>
-                                    <circle cx="35" cy="15" r="2" fill="#ea4335"/>
-                                    <circle cx="15" cy="25" r="2" fill="#fbbc05"/>
-                                    <circle cx="25" cy="25" r="3" fill="#ffffff"/>
-                                    <circle cx="35" cy="25" r="2" fill="#8b5cf6"/>
-                                    <circle cx="15" cy="35" r="2" fill="#06b6d4"/>
-                                    <circle cx="25" cy="35" r="2" fill="#ff6b6b"/>
-                                    <circle cx="35" cy="35" r="2" fill="#34d399"/>
+                                <!-- Abstract Tech Symbol -->
+                                <g stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round">
+                                    <!-- Main Structure -->
+                                    <path d="M15 20 L25 15 L35 20 L35 30 L25 35 L15 30 Z"/>
+                                    <path d="M20 20 L25 18 L30 20"/>
+                                    <path d="M20 30 L25 32 L30 30"/>
+                                    <path d="M25 15 L25 35"/>
                                 </g>
                                 
-                                <!-- Data Flow Dots -->
-                                <circle cx="15" cy="15" r="1" fill="#60a5fa">
-                                    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+                                <!-- Tech Indicators -->
+                                <circle cx="20" cy="22" r="1" fill="#60a5fa">
+                                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
                                 </circle>
-                                <circle cx="35" cy="35" r="1" fill="#34d399">
-                                    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
+                                <circle cx="30" cy="22" r="1" fill="#34a853">
+                                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="20" cy="28" r="1" fill="#ea4335">
+                                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="30" cy="28" r="1" fill="#fbbc05">
+                                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="2.1s" repeatCount="indefinite"/>
+                                </circle>
+                                
+                                <!-- Central Hub -->
+                                <circle cx="25" cy="25" r="3" fill="#ffffff" opacity="0.9">
+                                    <animate attributeName="r" values="3;4;3" dur="4s" repeatCount="indefinite"/>
                                 </circle>
                                 
                                 <!-- Gradients -->
                                 <defs>
-                                    <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-                                        <stop offset="50%" style="stop-color:#334155;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+                                    <linearGradient id="minimalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
                                     </linearGradient>
-                                    <linearGradient id="circuitBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <linearGradient id="minimalBorder" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
                                         <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
                                     </linearGradient>
